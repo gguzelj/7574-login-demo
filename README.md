@@ -11,6 +11,16 @@ spring.datasource.url=jdbc:mysql://localhost:3306/login
 spring.datasource.username=root
 ```
 
+## Docker
+
+Run:
+
+```bash
+    git clone https://github.com/gguzelj/7574-login-demo.git
+    cd 7574-login-demo
+    docker-compose up
+```
+
 ## Download, build and run
 
 In order to build the project execute:
