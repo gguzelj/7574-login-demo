@@ -26,7 +26,7 @@ public class SecurityInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         final String requestedUri = this.transformUri(request.getRequestURI());
-        if (requestedUri.equals("/users")) {
+        if (requestedUri.equals("/users") && request.getMethod().equals("GET")) {
             this.analyzeToken(request.getHeader("Authorization"));
         }
         return super.preHandle(request, response, handler);
