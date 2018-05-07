@@ -2,8 +2,7 @@ version: '3'
 
 services:
   login_demo:
-    build: .
-    image: fiuba-login-demo-5
+    image: gguzelj/7574-login-demo
     ports:
       - 8080:8080
     links:
