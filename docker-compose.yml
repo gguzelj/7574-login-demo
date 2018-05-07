@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  login_demo:
+    build: .
+    image: fiuba-login-demo-5
+    ports:
+      - 8080:8080
+    links:
+      - db:demodb
+    command: ["/source/wait-for-it.sh", "demodb:3306", "--", "java", "-jar", "/app/demo.jar"]
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_DATABASE=login
