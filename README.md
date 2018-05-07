@@ -4,7 +4,7 @@ Login api demo
 ## Requisites
 
 This applications runs with java 8, and requires a local mysql service running.
-Connection settins are placed in application.properties file:
+Connection settings are placed under application.properties:
 
 ```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/login
