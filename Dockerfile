@@ -4,7 +4,7 @@ COPY . /source
 WORKDIR /source
 RUN mkdir /app && \
     mvn clean package && \
-    cp presentation/target/presentation-*.jar /app/demo.jar
+    cp application/target/application-*.jar /app/demo.jar
 
 RUN chmod 777 /source/wait-for-it.sh
 
